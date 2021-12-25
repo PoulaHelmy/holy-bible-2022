@@ -1,0 +1,80 @@
+@keyframes svganimation {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dashoffset: 1000;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.tree {
+  max-width: 100vw;
+  max-height: 100vh;
+  width: 100vw;
+  height: 100vh;
+  background-color: #006266;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tree svg {
+  /* fill: none; */
+  stroke-width: 1px;
+  stroke: white;
+  width: 70%;
+  height: 70%;
+}
+
+.tree svg .text {
+  width: 10px;
+  fill: white;
+}
+
+.tree svg .p {
+  stroke-dashoffset: 700;
+  stroke-dasharray: 70;
+  animation: svganimation 20s linear forwards infinite;
+}
+
+.tree svg .c {
+  stroke-dashoffset: 1000;
+  stroke-dasharray: 13;
+}
+
+.tree svg .c1 {
+  animation: svganimation 100s linear forwards infinite;
+}
+
+.tree svg .c2 {
+  animation: svganimation 100s linear forwards infinite;
+  animation-delay: .05s;
+}
+
+.tree svg .c3 {
+  animation: svganimation 100s linear forwards infinite;
+  animation-delay: .25s;
+}
+
+.tree svg .c4 {
+  animation: svganimation 100s linear forwards infinite;
+  animation-delay: .30s;
+}
+
+.tree svg .c5 {
+  animation: svganimation 100s linear forwards infinite;
+  animation-delay: .20s;
+}
+
+.tree svg .c6 {
+  animation: svganimation 100s linear forwards infinite;
+  animation-delay: .10s;
+}
+
+.tree svg .c7 {
+  animation: svganimation 100s linear forwards infinite;
+  animation-delay: .15s;
+}

@@ -1,0 +1,19 @@
+
+.wrapper {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--background);
+}
+
+.text {
+  color: var(--background);
+  font-size: 8em;
+  font-weight: bold;
+  position: relative;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  text-shadow: var(--backgroundShadow),
+  var(--textshadow);
+}

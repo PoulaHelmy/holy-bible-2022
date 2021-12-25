@@ -1,1 +1,163 @@
-/* You can add global styles to this file, and also import other style files */
+@import "assets/styles/themes/theme";
+
+:root {
+  /*----------------------- Typography ------------------------*/
+  --font-family: 'Montserrat', sans-serif;
+  --font-size-10: 0.625rem;
+  --font-size-12: 0.75rem;
+  --font-size-13: 0.825rem;
+  --font-size-14: 0.875rem;
+  --font-size-15: 0.9375rem;
+  --font-size-16: 1rem;
+  --font-size-18: 1.125rem;
+  --font-size-19: 1.1875rem;
+  --font-size-20: 1.25rem;
+  --font-size-23: 1.450rem;
+  --font-size-24: 1.5rem;
+  --font-size-22: 1.375rem;
+  --font-size-28: 1.75rem;
+  --font-size-29: 1.825rem;
+  --font-size-30: 1.875rem;
+  --font-size-32: 2rem;
+  --font-size-48: 3rem;
+
+  // Font Wights
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semiBold: 600;
+  --fw-bold: 700;
+  /*----------------------- Colors ------------------------*/
+  --mainColor: #fcb040;
+  --oto-green: #8db759;
+  --oto-blue: #2bacb8;
+  --fontColor: #272727;
+  --font-color: #a7a7a7;
+  --font-color-light: #757575;
+  --selectedColor: #f5cdc3;
+  --background-color-gray-light: #f6f6f6;
+  --color-white: #ffffff;
+  --grey: #808080;
+  --lightBlack: #474747;
+  --lightBlue: #6d7783;
+  --redColor: #cd2238;
+  --successColor: #17e283;
+  --light-grey: #929293;
+  --secOto: #33abb8;
+  --color-purple: #2e0f38;
+  --color-grammar: #8db759;
+  --color-writing: #2bacb8;
+  --color-speaking: #f05027;
+  --color-reading: #5591d8;
+  --color-listening: #fcb040;
+  --semi-gray: #eeeeee;
+  --color-gray-6: #878787;
+  --color-gray-5: #444444;
+  --color-gray-4: #707070;
+  --color-gray-3: #878787;
+  --color-gray-2: #9b9b9b;
+  --color-gray-1: #f4f4f4;
+  --color-gray-0: #c4c4c4;
+  --tui-clear-hover: rgba(265, 61, 86, 0.6); // translucent dark fill hover
+  --tui-clear-active: rgba(265, 61, 86, 0.8); // translucent dark fill pressed
+  --tui-text-03: rgba(265, 61, 86, 1);
+  --background: #c0c0c0;
+  --backgroundShadow: -6px 6px 15px rgba(0, 0, 0, 0.5);
+  --textshadow: 6px -6px 15px rgba(255, 255, 255, 0.8);
+  --christmas1: #f5624d;
+  --christmas2: #cc231e;
+  --christmas3: #34a65f;
+  --christmas4: #0f8a5f;
+  --christmas5: #235e6f;
+
+  /*----------------------- Border Radius ------------------------*/
+  --rd-circle: 50%;
+  --rd-32: 2rem;
+  --rd-30: 1.875rem;
+  --rd-24: 1.5rem;
+  --rd-16: 1rem;
+  --rd-12: 0.75rem;
+  --rd-11: 0.6875rem;
+  --rd-10: 0.625rem;
+  --rd-9: 0.5625rem;
+  --rd-8: 0.5rem;
+  --rd-7: 0.4375rem;
+  --rd-6: 0.375rem;
+  --rd-5: 0.3125rem;
+  --rd-4: 0.25rem;
+
+  /*----------------------- Box Shadows ------------------------*/
+  --box-shadow: 0px 3px 41px #00000029;
+  --box-shadow-light: 0px 15px 25px #00000029;
+  --card-shadow: 0 0 8px -2px rgb(0 0 0 / 50%);
+
+  /*----------------------- Transitions ------------------------*/
+  --transition-100ms: 0.2s ease-in-out;
+  --transition-200ms: 0.2s ease-in-out;
+  --transition-300ms: 0.3s ease-in-out;
+  --transition-400ms: 0.4s ease-in-out;
+  --transition-500ms: 0.5s ease-in-out;
+
+}
+
+@mixin customize-scroll($w: 1rem, $h: 1rem, $border: 0.375rem) {
+  @media all and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
+    &::-webkit-scrollbar,
+    &::-webkit-scrollbar-thumb {
+      width: $w;
+      height: $h;
+      border-radius: 6.25rem;
+      background-clip: padding-box;
+      border: $border solid transparent;
+    }
+
+    &::-webkit-scrollbar {
+      background-color: #eeeeee;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--tui-clear-hover);
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      background-color: var(--tui-clear-active);
+    }
+
+    &::-webkit-scrollbar-thumb:active {
+      background-color: var(--tui-text-03);
+    }
+  }
+}
+
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  outline: none !important;
+  scroll-behavior: smooth;
+  @include customize-scroll();
+}
+
+
+*::selection {
+  color: var(--fontColor);
+  background: var(--oto-blue);
+}
+
+a {
+  text-decoration: none !important;
+}
+
+img {
+  max-width: 100%;
+}
+
+ol, ul {
+  margin-bottom: 0;
+  padding-left: 0 !important;
+}
+

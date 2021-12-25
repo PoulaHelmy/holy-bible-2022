@@ -1,0 +1,12 @@
+<div class="wrapper">
+  <div class="content">
+    <div class="card__container">
+      <div class="card__title">
+        <p>رسالة ربنا ليك :</p>
+      </div>
+      <div class="card__body">
+        <img *ngIf="data[number].type === 'image'" [src]="data[number].value" alt="">
+      </div>
+    </div>
+  </div>
+</div>
