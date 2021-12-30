@@ -25,7 +25,7 @@ export class AppComponent implements OnInit {
           this.router.navigate(['/journey1']).then();
           break;
         case 2:
-          this.router.navigate(['/journey2']).then();
+          this.router.navigate(['/journey1']).then();
           break;
         case 3:
           this.router.navigate(['/journey3']).then();

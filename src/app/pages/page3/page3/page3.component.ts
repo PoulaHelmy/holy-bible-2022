@@ -10,9 +10,12 @@ import {Media} from "../../../data/media";
 export class Page3Component implements OnInit {
   data: { type: string; value: string }[] = Media;
   number: number;
+  backgroundNumber = 1;
 
   constructor() {
     this.number = getRandomInt(0, this.data.length - 1);
+    this.backgroundNumber = getRandomInt(1, 7);
+
   }
 
 

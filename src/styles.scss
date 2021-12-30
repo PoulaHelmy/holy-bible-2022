@@ -140,6 +140,7 @@ body {
   outline: none !important;
   scroll-behavior: smooth;
   @include customize-scroll();
+  //background: var(--christmas3);
 }
 
 

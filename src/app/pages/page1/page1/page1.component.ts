@@ -10,9 +10,11 @@ import {getRandomInt} from "../../../shared/functoins/random-numbers";
 export class Page1Component implements OnInit {
   data: { ref: string; value: string }[] = data1;
   number: number;
+  backgroundNumber = 1;
 
   constructor() {
     this.number = getRandomInt(0, this.data.length - 1);
+    this.backgroundNumber = getRandomInt(1, 7);
   }
 
   ngOnInit(): void {

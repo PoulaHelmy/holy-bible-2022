@@ -24,7 +24,6 @@ import {IconsWrapersComponent} from './shared/components/icons-wrapers/icons-wra
     AppRoutingModule,
     BrowserAnimationsModule
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {
