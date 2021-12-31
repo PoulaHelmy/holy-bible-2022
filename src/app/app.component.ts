@@ -14,26 +14,31 @@ export class AppComponent implements OnInit {
 
   constructor(private router: Router) {
     this.loader = getRandomInt(1, 100);
-    this.journey = getRandomInt(1, 3);
+    this.journey = getRandomInt(1, 500);
   }
 
   ngOnInit(): void {
     setTimeout(() => {
       this.loading = false;
-      switch (this.journey) {
-        case 1:
-          this.router.navigate(['/journey1']).then();
-          break;
-        case 2:
-          this.router.navigate(['/journey1']).then();
-          break;
-        case 3:
-          this.router.navigate(['/journey3']).then();
-          break;
-        default: {
-          this.router.navigate(['/journey1']).then();
-        }
+      if (this.journey % 2 === 0) {
+        this.router.navigate(['/journey1']).then();
+      } else {
+        this.router.navigate(['/journey3']).then();
       }
+      // switch (this.journey) {
+      //   case 1:
+      //     this.router.navigate(['/journey1']).then();
+      //     break;
+      //   case 2:
+      //     this.router.navigate(['/journey1']).then();
+      //     break;
+      //   case 3:
+      //     this.router.navigate(['/journey3']).then();
+      //     break;
+      //   default: {
+      //     this.router.navigate(['/journey1']).then();
+      //   }
+      // }
     }, 3000);
   }
 }
